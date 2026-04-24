@@ -1,0 +1,30 @@
+PROMPT:
+"Act as a Senior AI Engineer. Build a complete 'Handwritten Answer Grading System' in Python. Use a modular architecture and create the following directory structure: /data_synthetic, /models, and /src.
+
+1. Data Pipeline (src/generator.py): Create a script that generates 1,000 synthetic handwriting images. Use 10 different Google Handwriting Fonts (e.g., 'Indie Flower', 'Gloria Hallelujah'). Apply OpenCV transformations including random rotation (+/- 5 degrees), Gaussian blur, and Elastic Distortion (using a displacement field with alpha=200, sigma=20) to make the text look like messy human writing.
+
+2. OCR Engine (src/ocr_engine.py): Implement a Tesseract-based extraction script. Include a preprocessing function that uses Otsu’s Binarization and 1.5x Rescaling to handle thin handwriting strokes. Use the --oem 3 --psm 3 configuration.
+
+3. The Scoring Brain (src/scorer.py): Build a Semantic Evaluation Engine FROM SCRATCH using pure Python and Scikit-Learn. Do NOT use SBERT. Implement:
+
+A TF-IDF Vectorizer trained on a provided 'Correct Answer' and 5 variations (synonyms).
+
+A manual Cosine Similarity function to calculate the distance between the student's OCR text and the reference answer.
+
+A grading logic that maps similarity scores (0.0 to 1.0) to a 10-point scale.
+
+4. User Interface (src/app.py): Create a Streamlit dashboard.
+
+Allow the user to upload an image.
+
+Show the cleaned/preprocessed image.
+
+Display the OCR text and the final Similarity Score.
+
+Show a 'Success' message with the assigned marks.
+
+5. Implementation Details:
+
+Use requirements.txt with opencv-python, pytesseract, scikit-learn, streamlit, and pillow.
+
+Ensure all math (Cosine Similarity and TF-IDF) is documented in the code to prove it was built from scratch for a hackathon."
