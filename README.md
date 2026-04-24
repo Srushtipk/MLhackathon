@@ -192,24 +192,3 @@ streamlit run src/app.py
 
 ---
 
-## 💡 Future Enhancements
-
-- [ ] Add more features (grammar score, spelling, confidence)
-- [ ] Train on real handwritten datasets (IAM, MNIST)
-- [ ] Deploy to cloud (Hugging Face, AWS)
-- [ ] Multi-question grading rubrics
-- [ ] Teacher feedback integration
-- [ ] Model retraining pipeline
-
----
-
-## 📝 Notes
-
-- **Tesseract**: Auto-detected on Windows from common install paths
-- **Model**: Retrain anytime by running `python src/train_model.py`
-- **Features**: Easy to add more features in `extract_features()`
-- **Rubric**: Modify grading rules in `generate_synthetic_training_data()`
-
----
-
-**Built for ML Hackathon | Supervised Learning + OCR + Streamlit**
